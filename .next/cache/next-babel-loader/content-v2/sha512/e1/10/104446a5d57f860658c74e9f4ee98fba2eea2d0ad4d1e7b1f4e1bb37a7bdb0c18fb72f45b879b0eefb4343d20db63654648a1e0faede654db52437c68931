@@ -1,0 +1,1 @@
+{"ast":null,"code":"import \"./css/main.css\";","map":{"version":3,"sources":["C:/Users/felip/OneDrive/Documents/GitHub/Octagon/pages/_app.js"],"names":[],"mappings":"AAAA,OAAO,gBAAP","sourcesContent":["import \"./css/main.css\"\r\n"]},"metadata":{},"sourceType":"module"}
