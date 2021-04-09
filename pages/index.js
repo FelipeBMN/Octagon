@@ -1,42 +1,68 @@
 import React from 'react';
 import 'bootstrap/dist/css/main.css';
 import Image from 'next/image';
-import logo from '../images/Logo1.png';
 
+/** Inicio da lista de imagens */
+import logo from '../images/Logo1.png';
+import slider from '../images/slider.svg';
+/** Fim da lista de imagens */
+
+const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
 function Home() {
     return ( 
         <div>
-            <div className="header">
-                <div className="container">
-                    <nav className="navbar navbar-expand-lg navbar-light">
-                        <div className="container-fluid">
-                            <a className="navbar-brand" href="#">
-                                <img src={logo} alt="logo" nameClass="logo" width={180} height={50}/>
-                                </a>
-                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span className="navbar-toggler-icon"></span>
-                            </button>
-                            <div className="collapse navbar-collapse" id="navbarNav">
-                                <ul className="navbar-nav">
-                                    <li className="nav-item">
-                                        <a className="nav-link active" aria-current="page" href="#">Home</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="#">Features</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="#">Pricing</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                    </li>
-                                </ul>
-                            </div>
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href={font} rel="stylesheet"/>
+            {/** Inicio do Header */}
+            <div id="header">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                        <a class="navbar-brand" href="#">
+                            <img src={logo} alt="logo" nameClass="logo" width={180} height={50}/>
+                            </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav bd-highlight">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sobre</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Serviços</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Portifólio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contato</a>
+                                </li>
+                            </ul>
                         </div>
                     </nav>
+                    {/** Fim do Header */}
 
-                    <h1>Hello, world!</h1>
 
+                    {/** Inicio do slider */}
+                    <div id="slider">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 align-self-center">
+                                    <h1>Texto importante escrever aqui</h1>
+                                    <h4>Descrição do texto acima com mais detalhes</h4>
+                                    <a class="btn btn-primary button-slider button-orange">saiba mais</a>
+                                    <a class="btn btn-outline-primary button-slider button-orange-white">contato</a>
+                                </div>
+                                <div class="col-md-8 align-self-center text-center">
+                                    <img src={slider} class="img fluid" alt="slider"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/** Fim do Slider */}
 
 
 
