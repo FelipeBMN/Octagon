@@ -1,9 +1,12 @@
-import React from 'react';
-import 'bootstrap/dist/css/main.css';
-import Image from 'next/image';
+import React,{useState} from 'react';
+import $  from 'jquery';
+import Head from 'next/head'
+import img from 'next/image';
+
+
 
 /** Inicio da lista de imagens */
-import logo from '../images/Logo1.png';
+import logo from '../images/logo1.png';
 import slider from '../images/slider-img.svg';
 import sobre from '../images/engrenagem.svg';
 import destaque1 from '../images/destaque1.svg';
@@ -11,16 +14,24 @@ import destaque2 from '../images/destaque2.svg';
 import destaque3 from '../images/destaque3.svg';
 import destaque4 from '../images/destaque4.svg';
 
+
 /** Fim da lista de imagens */
 
 const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
-function Home() {
+
+export default function Home({name}) {    
+
     return ( 
         <div>
+            <Head>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href={font} rel="stylesheet"/>
+            <title>Octagon</title>
+            <link rel="icon" href="./favicon1.png"></link>
+            </Head>
+
             {/** Inicio do Header */}
-            <div id="header">
+            <div id="header" class="menu">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
                         <a class="navbar-brand" href="#">
@@ -55,15 +66,15 @@ function Home() {
 
             {/** Inicio do slider */}
             <div id="slider" class="block">
-                <div class="container mt-4">
-                    <div class="row">
-                        <div class="col-md-4 align-self-center mb-md-0 mb-4">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="mt-5 col-md-4 align-self-center mb-md-0 mb-4">
                             <h1>Texto importante escrever aqui</h1>
                             <h4 class="mb-4">Descrição do texto acima com mais detalhes</h4>
                             <a class="btn btn-primary button-slider button-orange d-md-inline-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2">saiba mais</a>
                             <a class="btn btn-outline-primary button-slider button-orange-white d-md-inline-block d-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2">contato</a>
                         </div>
-                        <div class="col-md-8 align-self-center text-center">
+                        <div class="col-md-8 mt-5 align-self-center text-center">
                             <img src={slider} class="img-fluid" alt="slider"/>
                         </div>
                     </div>                
@@ -152,5 +163,92 @@ function Home() {
     )
 }
 
-export default  Home
+
+
+function Menu() {
+    const [scroll, setScroll] = useState(0);
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", mudarMenu);
+
+    }
+    
+
+    function mudarMenu() {
+        setScroll(scroll = window.scrollY);
+    }
+
+    if (scroll > 100) {
+        return(
+            <div id="header" class="menu">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                        <a class="navbar-brand" href="#">
+                            <img src={logo} alt="logo" nameClass="logo" width={180} height={50}/>
+                            </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav bd-highlight">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sobre</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Serviços</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Portifólio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>            
+            </div>
+        )
+    }else{
+        return(
+            <div id="header">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                        <a class="navbar-brand" href="#">
+                            <img src={logo} alt="logo" nameClass="logo" width={180} height={50}/>
+                            </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav bd-highlight">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sobre</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Serviços</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Portifólio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>            
+            </div>
+        )
+    }
+    
+}
+
+
 

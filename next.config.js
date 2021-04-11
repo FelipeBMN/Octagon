@@ -1,18 +1,3 @@
 const withImages = require('next-images')
-module.exports = withImages({
- esModule: true
-})
+module.exports = withImages({})
 
-const webpack = require('webpack')
-
-module.exports = {
-    webpack: (config, { dev }) => {
-        config.plugins.push(
-            new webpack.ProvidePlugin({
-                '$': 'jquery',
-                'jQuery': 'jquery',
-            })
-        )
-        return config
-    }
-}
