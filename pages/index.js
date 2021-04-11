@@ -19,6 +19,7 @@ import destaque4 from '../images/destaque4.svg';
 
 const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
 
+/** Executa no cliente */
 export default function Home({name}) {    
 
     return ( 
@@ -163,92 +164,4 @@ export default function Home({name}) {
     )
 }
 
-
-
-function Menu() {
-    const [scroll, setScroll] = useState(0);
-
-    if (typeof window !== "undefined") {
-        window.addEventListener("scroll", mudarMenu);
-
-    }
-    
-
-    function mudarMenu() {
-        setScroll(scroll = window.scrollY);
-    }
-
-    if (scroll > 100) {
-        return(
-            <div id="header" class="menu">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                        <a class="navbar-brand" href="#">
-                            <img src={logo} alt="logo" nameClass="logo" width={180} height={50}/>
-                            </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav bd-highlight">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Sobre</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Serviços</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Portifólio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contato</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>            
-            </div>
-        )
-    }else{
-        return(
-            <div id="header">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                        <a class="navbar-brand" href="#">
-                            <img src={logo} alt="logo" nameClass="logo" width={180} height={50}/>
-                            </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav bd-highlight">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Sobre</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Serviços</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Portifólio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contato</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>            
-            </div>
-        )
-    }
-    
-}
-
-
-
+/** O que eu exportar aqui so sera carregado no servidor */
