@@ -24,6 +24,9 @@ import logo6 from '../images/clientes/logo6.svg';
 import logo7 from '../images/clientes/logo7.svg';
 import logo8 from '../images/clientes/logo8.svg';
 import logo9 from '../images/clientes/logo9.svg';
+import img_parcerias from '../images/clientes-img.svg';
+import telefone from "../images/phone.svg"
+import S1 from '../images/servicos/1.jpg'
 /** Fim da lista de imagens */
 
 const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
@@ -35,9 +38,9 @@ export default function Home() {
     const [headerClass, setHeaderClassName] = useState('');
     
     const handleScroll = (headerClass) => {
-        if (headerClass !== 'menu' && window.pageYOffset >= 100) {
+        if (headerClass !== 'menu' && window.pageYOffset >= 1) {
             setHeaderClassName('menu');
-        } else if (headerClass === 'menu' && window.pageYOffset < 100) {
+        } else if (headerClass === 'menu' && window.pageYOffset  <= 0) {
             setHeaderClassName('');
         }
     }
@@ -94,7 +97,7 @@ export default function Home() {
             <div id="slider" className="block">
                 <div className="container">
                     <div className="row mt-5">
-                        <div className="mt-5 col-md-4 align-self-center mb-md-0 mb-4">
+                        <div className="col-md-4 mt-5 align-self-center mb-md-0 mb-4">
                             <h1>Texto importante escrever aqui</h1>
                             <h4 className="mb-4">Descrição do texto acima com mais detalhes</h4>
                             <a className="btn btn-primary button-slider button-orange d-md-inline-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2" >saiba mais</a>
@@ -187,7 +190,7 @@ export default function Home() {
             <div id="parcerias" className="block">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 align-self-center">
+                        <div className="col-lg-6 col-md-12 align-self-center">
                             <div className="row">
                                 <div className="col-md-4 col-6 mb-4">
                                     <a src="#" className="link-parceria">
@@ -236,13 +239,53 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6 align-self-center">
-
+                        <div className="col-lg-6 col-md-12 align-self-center">
+                            <div className="parcerias-texto mt-5">
+                                <div className="imagem">
+                                    <img src={img_parcerias} className="img-fluid" />
+                                    <div className="d-inline-block pl-md-0 pl-3">
+                                        <span>10</span>
+                                        Anos de Experiências
+                                    </div>
+                                </div>
+                                <div className="telefone">
+                                    <img src={telefone} className="img-fluid"/>
+                                    <div className="texto d-inline-block pl-md-0 pl-3">
+                                        <span>(88) 99854 8475 </span>
+                                        Atendimentos de Segunda a Sexta, das 8h as 17h
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             {/** Parcerias */}
+
+            {/** Serviços */}
+            <div className="portifolio">
+                <div className="container">
+
+                    <h2 className="title text-center">Serviços Recentes</h2>
+                    <h4 className="subtitle text-center mb-4"> Subtitulo para serviços recentes</h4>
+
+                    <div className="row">
+                        <div className="col-lg-4 col-6 mb-4 element-item website email">
+                            <a href="../images/servicos/1.jpg" class="popup-link">
+                                <img src={S1} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            {/** Serviços */}
+
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
             <script src="./js/bootstrap.min.js"></script>

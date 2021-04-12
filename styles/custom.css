@@ -6,15 +6,16 @@ html {
 #header {
     width: 100%;
     background-color: transparent;
-    transition: background ease-out 0.2s;
+    transition: background ease-in-out 0.2s;
 }
 
 #header.menu {
-    margin-top:-50px;
+    margin-top: -50px;
     position: fixed;
     background: #fff;
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
     z-index: 9999;
+    transition: 0.2s;
 }
 
 #header .navbar-collapse {
@@ -86,3 +87,74 @@ html {
     max-height: 160px;
 }
 
+#parcerias a.link-parceria {
+    padding: 0 15px;
+    background: rgb(255, 255, 255);
+    display: Flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px var(--gray);
+    height: 100px;
+    transition: ease-out all 0.2s;
+}
+
+#parcerias a.link-parceria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15 );
+}
+
+#parcerias a.link-parceria img{
+    max-height: 70px;
+    width: 100%;
+    opacity: 0.6;
+}
+
+#parcerias a.link-parceria:hover img{
+    opacity: 1;
+}
+
+#parcerias .parcerias-texto {
+    display: flex;
+    margin-left: 10%;
+    width:90%;
+    flex-direction: column; 
+    justify-content: space-between;
+    padding: 30px;
+    background-color: var(--light);
+    border-radius: 5px;
+}
+
+#parcerias .parcerias-texto .imagem {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    margin-left: -70px;
+    color: #b4b4b4;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+#parcerias .parcerias-texto .imagem span {
+    color: var(--secondary);
+    font-size: 110px;
+    line-height: 110px;
+    letter-spacing: -20px;
+    font-weight: 900;
+    display: block;
+}
+
+#parcerias .parcerias-texto .telefone {
+    display:flex;
+    font-size: 14px;
+    color: #b4b4b4;
+}
+
+#parcerias .parcerias-texto .telefone span{
+    font-size: 25px;
+    color: #797979;
+    font-weight: 900;
+    display: block;
+}
+#parcerias .parcerias-texto .telefone .texto{
+    margin-left: 15px;
+}
