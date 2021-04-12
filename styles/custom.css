@@ -68,7 +68,7 @@ html {
 #servicos a.destaque:hover {
     background: white;
     box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.12);
-    transition: scale(0.1s);
+    transform: scale(1.05);
 }
 
 #servicos p {

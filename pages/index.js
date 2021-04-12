@@ -1,5 +1,7 @@
-import React,{useState} from 'react';
-import $  from 'jquery';
+import React,{ useEffect, useState }  from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
+import $ from 'jquery';
 import Head from 'next/head'
 import img from 'next/image';
 
@@ -13,14 +15,37 @@ import destaque1 from '../images/destaque1.svg';
 import destaque2 from '../images/destaque2.svg';
 import destaque3 from '../images/destaque3.svg';
 import destaque4 from '../images/destaque4.svg';
-
-
+import logo1 from '../images/clientes/logo1.svg';
+import logo2 from '../images/clientes/logo2.svg';
+import logo3 from '../images/clientes/logo3.svg';
+import logo4 from '../images/clientes/logo4.svg';
+import logo5 from '../images/clientes/logo5.svg';
+import logo6 from '../images/clientes/logo6.svg';
+import logo7 from '../images/clientes/logo7.svg';
+import logo8 from '../images/clientes/logo8.svg';
+import logo9 from '../images/clientes/logo9.svg';
 /** Fim da lista de imagens */
 
 const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
+  
 
 /** Executa no cliente */
-export default function Home({name}) {    
+export default function Home() {    
+
+    const [headerClass, setHeaderClassName] = useState('');
+    
+    const handleScroll = (headerClass) => {
+        if (headerClass !== 'menu' && window.pageYOffset >= 100) {
+            setHeaderClassName('menu');
+        } else if (headerClass === 'menu' && window.pageYOffset < 100) {
+            setHeaderClassName('');
+        }
+    }
+    
+    React.useEffect(() => {
+        window.onscroll = () => handleScroll(headerClass);
+    }, [headerClass]); // IMPORTANT, This will cause react to update depending on change of this value
+
 
     return ( 
         <div>
@@ -29,34 +54,34 @@ export default function Home({name}) {
             <link href={font} rel="stylesheet"/>
             <title>Octagon</title>
             <link rel="icon" href="./favicon1.png"></link>
-            </Head>
+            </Head> 
 
             {/** Inicio do Header */}
-            <div id="header" class="menu">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                        <a class="navbar-brand" href="#">
+            <div id="header" className="menu">
+                <div className="container">
+                    <nav className="navbar navbar-expand-lg navbar-light justify-content-between">
+                        <a className="navbar-brand" href="#">
                             <img src={logo} alt="logo" nameClass="logo" width={180} height={50}/>
                             </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav bd-highlight">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav bd-highlight">
+                                <li className="nav-item">
+                                    <a className="nav-link active" aria-current="page" href="#">Página Inicial</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Sobre</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">Sobre</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Serviços</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">Serviços</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Portifólio</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">Portifólio</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contato</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">Contato</a>
                                 </li>
                             </ul>
                         </div>
@@ -66,17 +91,17 @@ export default function Home({name}) {
             {/** Fim do Header */}  
 
             {/** Inicio do slider */}
-            <div id="slider" class="block">
-                <div class="container">
-                    <div class="row mt-5">
-                        <div class="mt-5 col-md-4 align-self-center mb-md-0 mb-4">
+            <div id="slider" className="block">
+                <div className="container">
+                    <div className="row mt-5">
+                        <div className="mt-5 col-md-4 align-self-center mb-md-0 mb-4">
                             <h1>Texto importante escrever aqui</h1>
-                            <h4 class="mb-4">Descrição do texto acima com mais detalhes</h4>
-                            <a class="btn btn-primary button-slider button-orange d-md-inline-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2">saiba mais</a>
-                            <a class="btn btn-outline-primary button-slider button-orange-white d-md-inline-block d-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2">contato</a>
+                            <h4 className="mb-4">Descrição do texto acima com mais detalhes</h4>
+                            <a className="btn btn-primary button-slider button-orange d-md-inline-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2" >saiba mais</a>
+                            <a className="btn btn-outline-primary button-slider button-orange-white d-md-inline-block d-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2">contato</a>
                         </div>
-                        <div class="col-md-8 mt-5 align-self-center text-center">
-                            <img src={slider} class="img-fluid" alt="slider"/>
+                        <div className="col-md-8 mt-5 align-self-center text-center">
+                            <img src={slider} className="img-fluid" alt="slider"/>
                         </div>
                     </div>                
                 </div>
@@ -84,15 +109,15 @@ export default function Home({name}) {
             {/** Fim do Slider */}
 
             {/** Incio do sobre */}
-            <div id="sobre" class="block">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-md-6 align-self-center text-center mb-md-0 mb-4 order-md-1 order-2">
-                            <img src={sobre} class="img-fluid" alt="slider"/>
+            <div id="sobre" className="block">
+                <div className="container ">
+                    <div className="row">
+                        <div className="col-md-6 align-self-center text-center mb-md-0 mb-4 order-md-1 order-2">
+                            <img src={sobre} className="img-fluid" alt="slider"/>
                         </div>
-                        <div class="col-md-6 align-self-center mb-md-0 mb-5 order-md-2 order-1">
-                            <h2 class="title">Texto importante escrever aqui</h2>
-                            <h4 class="subtitle">It is a long established fact that a reader 
+                        <div className="col-md-6 align-self-center mb-md-0 mb-5 order-md-2 order-1">
+                            <h2 className="title">Texto importante escrever aqui</h2>
+                            <h4 className="subtitle">It is a long established fact that a reader 
                                 will be distracted.</h4>
                             <p>It is a long established fact that a reader 
                                 will be distracted by the readable content 
@@ -102,7 +127,7 @@ export default function Home({name}) {
                                 of letters, as opposed to using 'Content here, 
                                 content here', making it look like readable 
                                 English.</p>
-                            <button class="btn btn-primary button-orange">entre em contato</button>
+                            <button className="btn btn-primary button-orange">entre em contato</button>
                         </div>
                     </div>
                 </div>
@@ -110,47 +135,47 @@ export default function Home({name}) {
             {/** Fim do sobre */}
 
             {/** Incio do serviços */}
-            <div id="servicos" class="block">
-                <div class="container">
-                    <h2 class="title text-center">Serviços</h2>
-                    <h4 class="subtitle text-center mb-4">
+            <div id="servicos" className="block">
+                <div className="container">
+                    <h2 className="title text-center">Serviços</h2>
+                    <h4 className="subtitle text-center mb-4">
                         Resumo do foco dos serviços realizados pela empresa.
                     </h4>
-                    <div class="row">
-                        <div class="destaque col-lg-3 col-md-6 mb-4 mb-lg-0">
-                            <a href="#" class="destaque">
-                                <div class="img-container mb-3">
-                                    <img src={destaque1} class="img-fluid" alt="slider"/>
+                    <div className="row">
+                        <div className="destaque col-lg-3 col-md-6 mb-4 mb-lg-0">
+                            <a href="#" className="destaque">
+                                <div className="img-container mb-3">
+                                    <img src={destaque1} className="img-fluid" />
                                 </div>
-                                <h5 class="text-uppercase  ">Titulo Serviço</h5>
-                                <p class="mb-0">Descrição do serviço, contendo mais informações e caracteristicas.</p>
+                                <h5 className="text-uppercase  ">Titulo Serviço</h5>
+                                <p className="mb-0">Descrição do serviço, contendo mais informações e caracteristicas.</p>
                             </a>
                         </div>
-                        <div class="destaque col-lg-3 col-md-6 mb-4 mb-lg-0">
-                            <a href="#" class="destaque">
-                                <div class="img-container mb-3">
-                                    <img src={destaque2} class="img-fluid" alt="slider"/>
+                        <div className="destaque col-lg-3 col-md-6 mb-4 mb-lg-0">
+                            <a href="#" className="destaque">
+                                <div className="img-container mb-3">
+                                    <img src={destaque2} className="img-fluid" />
                                 </div>
-                                <h5 class="text-uppercase">Titulo Serviço</h5>
-                                <p class="mb-0">Descrição do serviço, contendo mais informações e caracteristicas.</p>
+                                <h5 className="text-uppercase">Titulo Serviço</h5>
+                                <p className="mb-0">Descrição do serviço, contendo mais informações e caracteristicas.</p>
                             </a>
                         </div>
-                        <div class="destaque col-lg-3 col-md-6 mb-4 mb-lg-0">
-                            <a href="#" class="destaque">
-                                <div class="img-container mb-3">
-                                    <img src={destaque3} class="img-fluid" alt="slider"/>
+                        <div className="destaque col-lg-3 col-md-6 mb-4 mb-lg-0">
+                            <a href="#" className="destaque">
+                                <div className="img-container mb-3">
+                                    <img src={destaque3} className="img-fluid" />
                                 </div>
-                                <h5 class="text-uppercase">Titulo Serviço</h5>
-                                <p class="mb-0">Descrição do serviço, contendo mais informações e caracteristicas.</p>
+                                <h5 className="text-uppercase">Titulo Serviço</h5>
+                                <p className="mb-0">Descrição do serviço, contendo mais informações e caracteristicas.</p>
                             </a>
                         </div>
-                        <div class="destaque col-lg-3 col-md-6 mb-4 mb-lg-0">
-                            <a href="#" class="destaque">
-                                <div class="img-container mb-3">
-                                    <img src={destaque4} class="img-fluid" alt="slider"/>
+                        <div className="destaque col-lg-3 col-md-6 mb-4 mb-lg-0">
+                            <a href="#" className="destaque">
+                                <div className="img-container mb-3">
+                                    <img src={destaque4} className="img-fluid" />
                                 </div>
-                                <h5 class="text-uppercase">Titulo Serviço</h5>
-                                <p class="mb-0">Descrição do serviço, contendo mais informações e caracteristicas.</p>
+                                <h5 className="text-uppercase">Titulo Serviço</h5>
+                                <p className="mb-0">Descrição do serviço, contendo mais informações e caracteristicas.</p>
                             </a>
                         </div>
                     </div>
@@ -158,10 +183,74 @@ export default function Home({name}) {
             </div>
             {/** Fim do serviços*/}
 
+            {/** Parcerias */}
+            <div id="parcerias" className="block">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6 align-self-center">
+                            <div className="row">
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo1} className="img-fluid"/>
+                                    </a>
+                                </div>
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo2} className="img-fluid"/>
+                                    </a>
+                                </div>
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo3} className="img-fluid"/>
+                                    </a>
+                                </div>
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo4} className="img-fluid"/>
+                                    </a>
+                                </div>
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo5} className="img-fluid"/>
+                                    </a>
+                                </div>
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo6} className="img-fluid"/>
+                                    </a>
+                                </div>
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo7} className="img-fluid"/>
+                                    </a>
+                                </div>
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo8} className="img-fluid"/>
+                                    </a>
+                                </div>
+                                <div className="col-md-4 col-6 mb-4">
+                                    <a src="#" className="link-parceria">
+                                        <img src={logo9} className="img-fluid"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 align-self-center">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/** Parcerias */}
+
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+            <script src="./js/bootstrap.min.js"></script>
         </div>   
     )
 }
 
-/** O que eu exportar aqui so sera carregado no servidor */
+/** O que eu exportar aqui so sera carregado no servidor
+ * 
+ */
+
