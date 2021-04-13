@@ -80,16 +80,16 @@ export default function Home() {
                                     <a className="nav-link active" aria-current="page" href="#">Página Inicial</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Sobre</a>
+                                    <a className="nav-link" href="#sobre-link">Sobre</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Serviços</a>
+                                    <a className="nav-link" href="#servicos-link">Serviços</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Portifólio</a>
+                                    <a className="nav-link" href="#portifolio-link">Portifólio</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Contato</a>
+                                    <a className="nav-link" href="#contato-link">Contato</a>
                                 </li>
                             </ul>
                         </div>
@@ -108,17 +108,18 @@ export default function Home() {
                             <a className="btn btn-primary button-slider button-orange d-md-inline-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2" >saiba mais</a>
                             <a className="btn btn-outline-primary button-slider button-orange-white d-md-inline-block d-block d-block mb-md-0 mb-2 mb-md-2 mr-mb-2">contato</a>
                         </div>
-                        <div className="col-md-8 mt-5 align-self-center text-center">
+                        <div  className="col-md-8 mt-5 align-self-center text-center">
                             <img src={slider} className="img-fluid" alt="slider"/>
                         </div>
                     </div>                
                 </div>
+                <div id="sobre-link"></div>
             </div>
             {/** Fim do Slider */}
 
             {/** Incio do sobre */}
             <div id="sobre" className="block">
-                <div className="container ">
+                <div className="container" >
                     <div className="row">
                         <div className="col-md-6 align-self-center text-center mb-md-0 mb-4 order-md-1 order-2">
                             <img src={sobre} className="img-fluid" alt="slider"/>
@@ -139,9 +140,10 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <div id="servicos-link"></div>
             </div>
             {/** Fim do sobre */}
-
+            
             {/** Incio do serviços */}
             <div id="servicos" className="block">
                 <div className="container">
@@ -188,6 +190,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <div id="parcerias-link"></div>
             </div>
             {/** Fim do serviços*/}
 
@@ -264,6 +267,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <div id="portifolio-link"></div>
             </div>
             {/** Parcerias */}
 
@@ -379,10 +383,9 @@ export default function Home() {
                                 <span className="badge bg-light text-dark"> Email</span>
                             </p>
                         </div>
-
                     </div>
-
                 </div>
+                <div id="depoimentos-link"></div>
             </div>
             {/** Serviços */}
             
@@ -420,6 +423,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <div id="contato-link"></div>
             </div>
             {/** Depoimentos */}
 
