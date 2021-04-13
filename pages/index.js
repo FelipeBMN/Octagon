@@ -7,6 +7,8 @@ import img from 'next/image';
 
 
 
+
+
 /** Inicio da lista de imagens */
 import logo from '../images/logo1.png';
 import slider from '../images/slider-img.svg';
@@ -35,6 +37,16 @@ import S6 from '../public/servicos/6.jpg';
 import S7 from '../public/servicos/7.jpg';
 import S8 from '../public/servicos/8.jpg';
 import S9 from '../public/servicos/9.jpg';
+import img_depoimento from '../images/user.svg';
+import aspas from '../images/quote.svg';
+import email from '../images/paperplane.svg';
+import twitter from '../images/twitter.svg';
+import instagram from '../images/instagram.svg';
+import facebook from '../images/facebook.svg';
+import linkedin from '../images/linkedin.svg';
+import youtube from '../images/youtube.svg';
+
+
 /** Fim da lista de imagens */
 
 const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
@@ -42,22 +54,7 @@ const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;9
 
 /** Executa no cliente */
 export default function Home() {    
-
-    const [headerClass, setHeaderClassName] = useState('');
     
-    const handleScroll = (headerClass) => {
-        if (headerClass !== 'menu' && window.pageYOffset >= 1) {
-            setHeaderClassName('menu');
-        } else if (headerClass === 'menu' && window.pageYOffset  <= 0) {
-            setHeaderClassName('');
-        }
-    }
-    
-    React.useEffect(() => {
-        window.onscroll = () => handleScroll(headerClass);
-    }, [headerClass]); // IMPORTANT, This will cause react to update depending on change of this value
-
-
     return ( 
         <div>
             <Head>
@@ -277,14 +274,14 @@ export default function Home() {
                     <h2 className="title text-center">Serviços Recentes</h2>
                     <h4 className="subtitle text-center mb-4"> Subtitulo para serviços recentes</h4>
                     <div className="button-group">
-                        <button className="">Todos</button>
-                        <button className="">SPDA</button>
-                        <button className="">PMUC</button>
-                        <button className="">Residencial</button>
+                        <button type="button" data-filter="*" class="active">Todos</button>
+                        <button type="button" data-filter=".SPDA" class="">SPDA</button>
+                        <button type="button" data-filter=".Fotovoltaico" class="">Fotovoutaico</button>
+                        <button type="button" data-filter=".Residencial" class="">Residencial</button>
                     </div>
-                    <div className="row">
+                    <div className="row grid">
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 SPDA Fotovoltaico">
                             <a href="/servicos/1.jpg" class="popup-link">
                                 <img src={S1} className="img-fluid mb-2"/>
                             </a>
@@ -295,7 +292,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 Fotovoltaico Residencial">
                             <a href="/servicos/2.jpg" class="popup-link">
                                 <img src={S2} className="img-fluid mb-2"/>
                             </a>
@@ -306,7 +303,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 Residencial SPDA">
                             <a href="/servicos/3.jpg" class="popup-link">
                                 <img src={S3} className="img-fluid mb-2"/>
                             </a>
@@ -317,7 +314,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 Residencial Residencial">
                             <a href="/servicos/4.jpg" class="popup-link">
                                 <img src={S4} className="img-fluid mb-2"/>
                             </a>
@@ -328,7 +325,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 Fotovoltaico Residencial">
                             <a href="/servicos/5.jpg" class="popup-link">
                                 <img src={S5} className="img-fluid mb-2"/>
                             </a>
@@ -339,7 +336,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 Residencial">
                             <a href="/servicos/6.jpg" class="popup-link">
                                 <img src={S6} className="img-fluid mb-2"/>
                             </a>
@@ -350,7 +347,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 Residencial SPDA">
                             <a href="/servicos/7.jpg" class="popup-link">
                                 <img src={S7} className="img-fluid mb-2"/>
                             </a>
@@ -361,7 +358,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 Fotovoltaico SPDA">
                             <a href="/servicos/8.jpg" class="popup-link">
                                 <img src={S8} className="img-fluid mb-2"/>
                             </a>
@@ -372,7 +369,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                        <div className="element-item col-lg-4 col-6 mb-4 SPDA Fotovoltaico">
                             <a href="/servicos/9.jpg" class="popup-link">
                                 <img src={S9} className="img-fluid mb-2"/>
                             </a>
@@ -388,10 +385,102 @@ export default function Home() {
                 </div>
             </div>
             {/** Serviços */}
+            
+            {/** Depoimentos */}
+            <div id="depoimentos" className="block">
+                <div className="container">
+                    <h2 className="title text-center"> Depoimentos </h2>
+                    <h4 className="subtitle text-center mb-4"> Subtitulo para depoimentos recentes</h4>
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="depoimento">
+                                <img src={img_depoimento} className="img-fluid"/>
+                                <div className="depoimento-texto pl-3">
+                                    <p> Aqui ira estar escrito o depoimento do cliente entre outras coisas
+                                    Aqui ira estar escrito o depoimento do cliente entre outras coisas
+                                    Aqui ira estar escrito o depoimento do cliente entre outras coisas
+                                    </p>
+                                    <p className="name"> <span>Felipe Bruno </span>/ Vice - Diretor da Octagon Engenharia</p>
+                                    <p className="mb-0 float-left"><img src={aspas}/></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="depoimento">
+                                <img src={img_depoimento} className="img-fluid"/>
+                                <div className="depoimento-texto pl-3">
+                                    <p> Aqui ira estar escrito o depoimento do cliente entre outras coisas 
+                                        Aqui ira estar escrito o depoimento do cliente entre outras coisas 
+                                        Aqui ira estar escrito o depoimento do cliente entre outras coisas
+                                    </p>
+                                    <p className="name"><span>Felipe Bruno </span>/ Vice - Diretor da Octagon Engenharia</p>
+                                    <p className="mb-0 float-left"><img src={aspas}/></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/** Depoimentos */}
+
+            {/** Footer */}
+            <div id="contato">
+                <div class="container">
+                    <div class="email">
+                        <img src={email}/>
+                        <h2 class="title text-center">
+                             Fique por dentro das promoções.
+                        </h2>
+                        <h4 class="subtitle text-center">
+                            Texto á ser auterado posteriormente apos revisão tecnicas e feedbacks.
+                        </h4>
+                        <form>
+                            <div class="flex-md-grow-1 pr-md-3 pb-md-0 pb-3">
+                                <label for='email' class="sr-only">E-mail</label>
+                                <input type="email" class="form-control w-100" id="email_input" placeholder="Seu Email"></input>
+                            </div>
+                            <div class="flex0=-grow-1 flex-md-grow-0">
+                                <button type="submit" class="btn btn-light button mb-3 d-md-inline d-block w-100" >
+                                    Cadastre-se
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="logo py-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src={logo} class="logo_foot img-fluid"/>
+                            </div>
+                            <div class="col-md-6  text-center align-self-center">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src={facebook}/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src={instagram}/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src={twitter}/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src={linkedin}/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src={youtube}/></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/** Footer */}
 
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
             <script src="./js/bootstrap.min.js"></script>
+            <script src="./js/isotope.js"></script>
+            <script src="./js/plugins.js"></script>
         </div>   
     )
 }

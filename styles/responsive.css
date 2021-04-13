@@ -6,4 +6,20 @@
     #servicos a.destaque .img-container img {
         max-height: 120px;
     }
+
+    #contato .email {
+        padding: 60px 30px 50px 30px;
+    }
+    
+    #contato .email form {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 991.98px){
+    #contato .email img {
+        width: 90px;
+        top: -40px;
+    }
 }

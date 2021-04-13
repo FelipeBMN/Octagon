@@ -1,6 +1,9 @@
 /* Ordenado por ordem de irarquia */
+@import url(./magnific-popup.css);
 @import url(./bootstrap.min.css);
 @import url(./config.css);
 @import url(./global.css);
 @import url(./custom.css);
 @import url(./responsive.css);
+@import url(./owl.carousel.min.css);
+@import url(./owl.theme.default.min.css);
