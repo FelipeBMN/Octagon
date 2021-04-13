@@ -40,7 +40,7 @@ html {
 
 
 #slider {
-    background: url(../images/slider-bg.svg) no-repeat bottom;
+    background: url(../Public/images/slider-bg.svg) no-repeat bottom;
     background-size: contain;
     background-position:center;
 }

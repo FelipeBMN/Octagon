@@ -10,6 +10,7 @@ import img from 'next/image';
 
 
 /** Inicio da lista de imagens */
+/*
 import logo from '../images/logo1.png';
 import slider from '../images/slider-img.svg';
 import sobre from '../images/engrenagem.svg';
@@ -45,8 +46,42 @@ import instagram from '../images/instagram.svg';
 import facebook from '../images/facebook.svg';
 import linkedin from '../images/linkedin.svg';
 import youtube from '../images/youtube.svg';
-
-
+*/
+const logo = './images/logo1.png';
+const slider = './images/slider-img.svg';
+const sobre = './images/engrenagem.svg';
+const destaque1 = './images/destaque1.svg';
+const destaque2 = './images/destaque2.svg';
+const destaque3 = './images/destaque3.svg';
+const destaque4 = './images/destaque4.svg';
+const logo1 = './images/clientes/logo1.svg';
+const logo2 = './images/clientes/logo2.svg';
+const logo3 = './images/clientes/logo3.svg';
+const logo4 = './images/clientes/logo4.svg';
+const logo5 = './images/clientes/logo5.svg';
+const logo6 = './images/clientes/logo6.svg';
+const logo7 = './images/clientes/logo7.svg';
+const logo8 = './images/clientes/logo8.svg';
+const logo9 = './images/clientes/logo9.svg';
+const img_parcerias = './images/clientes-img.svg';
+const telefone = "./images/phone.svg";
+const S1 = './servicos/1.jpg';
+const S2 = './servicos/2.jpg';
+const S3 = './servicos/3.jpg';
+const S4 = './servicos/4.jpg';
+const S5 = './servicos/5.jpg';
+const S6 = './servicos/6.jpg';
+const S7 = './servicos/7.jpg';
+const S8 = './servicos/8.jpg';
+const S9 = './servicos/9.jpg';
+const img_depoimento = './images/user.svg';
+const aspas = './images/quote.svg';
+const email = './images/paperplane.svg';
+const twitter = './images/twitter.svg';
+const instagram = './images/instagram.svg';
+const facebook = './images/facebook.svg';
+const linkedin = './images/linkedin.svg';
+const youtube = './images/youtube.svg';
 /** Fim da lista de imagens */
 
 const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
