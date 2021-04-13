@@ -25,8 +25,16 @@ import logo7 from '../images/clientes/logo7.svg';
 import logo8 from '../images/clientes/logo8.svg';
 import logo9 from '../images/clientes/logo9.svg';
 import img_parcerias from '../images/clientes-img.svg';
-import telefone from "../images/phone.svg"
-import S1 from '../images/servicos/1.jpg'
+import telefone from "../images/phone.svg";
+import S1 from '../public/servicos/1.jpg';
+import S2 from '../public/servicos/2.jpg';
+import S3 from '../public/servicos/3.jpg';
+import S4 from '../public/servicos/4.jpg';
+import S5 from '../public/servicos/5.jpg';
+import S6 from '../public/servicos/6.jpg';
+import S7 from '../public/servicos/7.jpg';
+import S8 from '../public/servicos/8.jpg';
+import S9 from '../public/servicos/9.jpg';
 /** Fim da lista de imagens */
 
 const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
@@ -263,15 +271,21 @@ export default function Home() {
             {/** Parcerias */}
 
             {/** Serviços */}
-            <div className="portifolio">
+            <div id="portifolio">
                 <div className="container">
 
                     <h2 className="title text-center">Serviços Recentes</h2>
                     <h4 className="subtitle text-center mb-4"> Subtitulo para serviços recentes</h4>
-
+                    <div className="button-group">
+                        <button className="">Todos</button>
+                        <button className="">SPDA</button>
+                        <button className="">PMUC</button>
+                        <button className="">Residencial</button>
+                    </div>
                     <div className="row">
-                        <div className="col-lg-4 col-6 mb-4 element-item website email">
-                            <a href="../images/servicos/1.jpg" class="popup-link">
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/1.jpg" class="popup-link">
                                 <img src={S1} className="img-fluid mb-2"/>
                             </a>
                             <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
@@ -280,6 +294,95 @@ export default function Home() {
                                 <span className="badge bg-light text-dark"> Email</span>
                             </p>
                         </div>
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/2.jpg" class="popup-link">
+                                <img src={S2} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/3.jpg" class="popup-link">
+                                <img src={S3} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/4.jpg" class="popup-link">
+                                <img src={S4} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/5.jpg" class="popup-link">
+                                <img src={S5} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/6.jpg" class="popup-link">
+                                <img src={S6} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/7.jpg" class="popup-link">
+                                <img src={S7} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/8.jpg" class="popup-link">
+                                <img src={S8} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+                        {/*item*/}
+                        <div className="element-item col-lg-4 col-6 mb-4  website email">
+                            <a href="/servicos/9.jpg" class="popup-link">
+                                <img src={S9} className="img-fluid mb-2"/>
+                            </a>
+                            <h5 className="text-uppercase mb-1">Lorem Ipsun</h5>
+                            <p className="mb-0">
+                                <span className="badge bg-light text-dark"> Website</span>
+                                <span className="badge bg-light text-dark"> Email</span>
+                            </p>
+                        </div>
+
                     </div>
 
                 </div>
