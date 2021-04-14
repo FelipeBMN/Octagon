@@ -86,7 +86,6 @@ const youtube = './images/youtube.svg';
 
 const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap";
   
-
 /** Executa no cliente */
 export default function Home() {    
     
