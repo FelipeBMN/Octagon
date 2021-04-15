@@ -21,6 +21,9 @@
     #portifolio .button-group button + button {
         margin-left: 5px;
     }
+    #contato .logo .logo_foot {
+        flex-direction: column; 
+    }
 }
 
 @media (max-width: 991.98px){
