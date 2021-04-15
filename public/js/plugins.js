@@ -32,6 +32,13 @@
 
 jQuery(document).ready(function($){
 // Isotope
+
+$(window).on("load", function () {
+  $("#portifolio .grid").isotope({
+    filter: "*",
+  });
+});
+
 let btns = $("#portifolio .button-group button");
 
 btns.click(function (e) {
@@ -41,13 +48,6 @@ btns.click(function (e) {
   let selector = $(e.target).attr("data-filter");
   $("#portifolio .grid").isotope({
     filter: selector,
-  });
-});
-
-
-$(window).on("load", function () {
-  $("#portifolio .grid").isotope({
-    filter: "*",
   });
 });
 
