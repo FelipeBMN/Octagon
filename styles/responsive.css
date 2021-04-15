@@ -29,6 +29,9 @@
         color: var(--primary);
         font-size: 17px;
     }
+    #contato ul{
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 991.98px){
