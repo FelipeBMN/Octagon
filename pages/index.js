@@ -88,7 +88,12 @@ const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;9
   
 /** Executa no cliente */
 export default function Home() {    
-
+    useEffect(() => {
+        var botoes = document.querySelectorAll("button.todos");
+        for (var i = 0; i < botoes.length; i++) {
+            botoes[i].click();
+        }
+    });
     return ( 
         <div>
             <Head>
@@ -312,14 +317,14 @@ export default function Home() {
                     <h2 className="title text-center">Serviços Recentes</h2>
                     <h4 className="subtitle text-center mb-4"> Subtitulo para serviços recentes</h4>
                     <div className="button-group">
-                        <button type="button" class="active">Todos</button>
+                        <button type="button" class="todos">Todos</button>
                         <button type="button" data-filter=".SPDA" class="">SPDA</button>
                         <button type="button" data-filter=".Fotovoltaico" class="">Fotovoutaico</button>
                         <button type="button" data-filter=".Residencial" class="">Residencial</button>
                     </div>
                     <div className="row grid">
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 SPDA Fotovoltaico">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 SPDA Fotovoltaico">
                             <a href="/servicos/1.jpg" class="popup-link">
                                 <img src={S1} className="img-fluid mb-2"/>
                             </a>
@@ -330,7 +335,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 Fotovoltaico Residencial">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 Fotovoltaico Residencial">
                             <a href="/servicos/2.jpg" class="popup-link">
                                 <img src={S2} className="img-fluid mb-2"/>
                             </a>
@@ -341,7 +346,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 Residencial SPDA">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 Residencial SPDA">
                             <a href="/servicos/3.jpg" class="popup-link">
                                 <img src={S3} className="img-fluid mb-2"/>
                             </a>
@@ -352,7 +357,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 Residencial Residencial">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 Residencial Residencial">
                             <a href="/servicos/4.jpg" class="popup-link">
                                 <img src={S4} className="img-fluid mb-2"/>
                             </a>
@@ -363,7 +368,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 Fotovoltaico Residencial">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 Fotovoltaico Residencial">
                             <a href="/servicos/5.jpg" class="popup-link">
                                 <img src={S5} className="img-fluid mb-2"/>
                             </a>
@@ -374,7 +379,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 Residencial">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 Residencial">
                             <a href="/servicos/6.jpg" class="popup-link">
                                 <img src={S6} className="img-fluid mb-2"/>
                             </a>
@@ -385,7 +390,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 Residencial SPDA">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 Residencial SPDA">
                             <a href="/servicos/7.jpg" class="popup-link">
                                 <img src={S7} className="img-fluid mb-2"/>
                             </a>
@@ -396,7 +401,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 Fotovoltaico SPDA">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 Fotovoltaico SPDA">
                             <a href="/servicos/8.jpg" class="popup-link">
                                 <img src={S8} className="img-fluid mb-2"/>
                             </a>
@@ -407,7 +412,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/*item*/}
-                        <div className="element-item col-lg-4 col-6 mb-4 SPDA Fotovoltaico">
+                        <div className="element-item clear col-lg-4 col-6 mb-4 SPDA Fotovoltaico">
                             <a href="/servicos/9.jpg" class="popup-link">
                                 <img src={S9} className="img-fluid mb-2"/>
                             </a>
@@ -518,7 +523,7 @@ export default function Home() {
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
             <script src="./js/bootstrap.min.js"></script>
             <script src="./js/isotope.js"></script>
-            <script src="./js/plugins.js"> fixImages();</script>
+            <script src="./js/plugins.js"></script>
         </div>   
     )
 }

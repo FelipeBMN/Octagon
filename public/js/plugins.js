@@ -31,17 +31,22 @@
 
 
 jQuery(document).ready(function($){
+
 // Isotope
-$(window).on("load", function () {
+/** 
+  $(window).on("load", function () {
   $("#portifolio .grid").isotope({
     filter: "*",
   });
-});
+}); 
+*/
+
 
 let btns = $("#portifolio .button-group button");
 
 btns.click(function (e) {
   $("#portifolio .button-group button").removeClass("active");
+  $("#portifolio .element-item").removeClass("clear");
   e.target.classList.add("active");
 
   let selector = $(e.target).attr("data-filter");
@@ -62,12 +67,4 @@ $(".grid .popup-link").magnificPopup({
 });    
 });
 
-function fixImages(){
-  // Isotope
-  $(window).on("load", function () {
-    $("#portifolio .grid").isotope({
-      filter: "*",
-    });
-  });
-}
 

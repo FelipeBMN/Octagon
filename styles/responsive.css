@@ -16,18 +16,18 @@
         flex-direction: column;
     }
     #portifolio .button-group button{
-        font-size: 20px;
+        font-size: 15px;
     }
     #portifolio .button-group button + button {
         margin-left: 9px;
-        font-size: 17px;
+        font-size: 15px;
     }
     #contato .logo {
         flex-direction: column; 
     }
     #portifolio .button-group button.active{
         color: var(--primary);
-        font-size: 17px;
+        font-size: 15px;
     }
     #contato ul{
         margin-top: 20px;
