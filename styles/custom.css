@@ -189,7 +189,7 @@ html {
 }
 
 #portifolio .button-group button + button {
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 #portifolio .button-group button:hover{
