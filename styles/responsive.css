@@ -37,7 +37,14 @@
         margin-top: -20px;
         font-size: 24px;
     }
-    
+    #contato ul{
+        justify-content: flex-start;
+        margin-left: 18%;
+        margin-top: 20px;
+    }
+    #contato .logo .logo_foot {
+        margin-left: 30%;
+    }
 }
 
 @media (max-width: 991.98px){
