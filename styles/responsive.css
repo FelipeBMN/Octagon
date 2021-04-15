@@ -32,6 +32,9 @@
     #contato ul{
         margin-top: 20px;
     }
+    #portifolio .element-item img{
+        max-width: 150px;
+    }
 }
 
 @media (max-width: 991.98px){
