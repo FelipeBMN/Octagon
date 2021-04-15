@@ -19,11 +19,17 @@
         font-size: 20px;
     }
     #portifolio .button-group button + button {
-        margin-left: 5px;
+        margin-left: 9px;
+        font-size: 17px;
     }
     #contato .logo {
         flex-direction: column; 
     }
+    #portifolio .button-group button.active{
+        color: var(--primary);
+        font-size: 17px;
+    }
+    
 }
 
 @media (max-width: 991.98px){

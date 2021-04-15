@@ -312,7 +312,7 @@ export default function Home() {
                     <h2 className="title text-center">Serviços Recentes</h2>
                     <h4 className="subtitle text-center mb-4"> Subtitulo para serviços recentes</h4>
                     <div className="button-group">
-                        <button type="button" data-filter="*" class="active">Todos</button>
+                        <button type="button" class="active">Todos</button>
                         <button type="button" data-filter=".SPDA" class="">SPDA</button>
                         <button type="button" data-filter=".Fotovoltaico" class="">Fotovoutaico</button>
                         <button type="button" data-filter=".Residencial" class="">Residencial</button>
