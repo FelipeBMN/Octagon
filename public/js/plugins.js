@@ -32,7 +32,6 @@
 
 jQuery(document).ready(function($){
 // Isotope
-
 $(window).on("load", function () {
   $("#portifolio .grid").isotope({
     filter: "*",
@@ -63,5 +62,12 @@ $(".grid .popup-link").magnificPopup({
 });    
 });
 
-
+function fixImages(){
+  // Isotope
+  $(window).on("load", function () {
+    $("#portifolio .grid").isotope({
+      filter: "*",
+    });
+  });
+}
 

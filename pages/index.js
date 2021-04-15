@@ -88,7 +88,7 @@ const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;9
   
 /** Executa no cliente */
 export default function Home() {    
-    
+
     return ( 
         <div>
             <Head>
@@ -518,7 +518,7 @@ export default function Home() {
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
             <script src="./js/bootstrap.min.js"></script>
             <script src="./js/isotope.js"></script>
-            <script src="./js/plugins.js"></script>
+            <script src="./js/plugins.js"> fixImages();</script>
         </div>   
     )
 }
