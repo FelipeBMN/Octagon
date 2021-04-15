@@ -21,7 +21,7 @@
     #portifolio .button-group button + button {
         margin-left: 5px;
     }
-    #contato .logo .logo_foot {
+    #contato .logo {
         flex-direction: column; 
     }
 }
