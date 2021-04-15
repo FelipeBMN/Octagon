@@ -22,4 +22,7 @@
         width: 90px;
         top: -40px;
     }
+    #portifolio .popup-link img{
+        max-height: 20px;
+    }
 }
