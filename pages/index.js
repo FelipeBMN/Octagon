@@ -89,10 +89,12 @@ const font = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;9
 /** Executa no cliente */
 export default function Home() {    
     useEffect(() => {
+        $(window).on("load", function () {
         var botoes = document.querySelectorAll("button.todos");
         for (var i = 0; i < botoes.length; i++) {
             botoes[i].click();
         }
+        });
     });
     return ( 
         <div>
