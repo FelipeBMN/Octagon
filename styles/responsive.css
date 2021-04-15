@@ -29,6 +29,14 @@
         color: var(--primary);
         font-size: 17px;
     }
+    #parcerias .parcerias-texto .imagem span {
+        font-size: 60px;
+        letter-spacing: -10px;
+    }
+    #parcerias .parcerias-texto .imagem p{
+        margin-top: -20px;
+        font-size: 24px;
+    }
     
 }
 

@@ -287,7 +287,7 @@ export default function Home() {
                                     <img src={img_parcerias} className="img-fluid" />
                                     <div className="d-inline-block pl-md-0 pl-3">
                                         <span>10</span>
-                                        Anos de Experiências
+                                        <p>Anos de Experiências</p>
                                     </div>
                                 </div>
                                 <div className="telefone">
