@@ -31,9 +31,14 @@
     }
     #contato ul{
         margin-top: 20px;
+        justify-content: flex-start;
     }
     #portifolio .element-item img{
         max-width: 150px;
+    }
+    #parcerias .parcerias-texto .imagem {
+        display: flex;
+        flex-direction: column;
     }
 }
 
