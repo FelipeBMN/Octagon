@@ -1,8 +1,10 @@
+npm init -y
+npm install next 
+npm install react
+npm isntall react-dom
+
 Instalar as dependências
 ### `npm install`
-
-Rodar o projeto
-### `npm rum dev`
 
 Instalar o react e o next
 ### `npm install next react react-dom`
